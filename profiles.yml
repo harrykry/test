@@ -1,0 +1,16 @@
+config:
+  partial_parse: true
+  printer_width: 120
+  send_anonymous_usage_stats: false
+  use_colors: true
+normalize:
+  outputs:
+    prod:
+      database: line3_huaxuanmes3
+      password: root07
+      port: 33306
+      schema: line3_huaxuanmes3
+      server: 192.168.0.92
+      type: mysql
+      username: root
+  target: prod

@@ -1,0 +1,141 @@
+name: airbyte_utils
+version: '1.0'
+config-version: 2
+profile: normalize
+model-paths:
+- models
+docs-paths:
+- docs
+analysis-paths:
+- analysis
+test-paths:
+- tests
+seed-paths:
+- data
+macro-paths:
+- macros
+target-path: ../build
+log-path: ../logs
+packages-install-path: /dbt
+clean-targets:
+- build
+- dbt_modules
+quoting:
+  database: true
+  schema: false
+  identifier: true
+models:
+  airbyte_utils:
+    +materialized: table
+    generated:
+      airbyte_ctes:
+        +tags: airbyte_internal_cte
+        +materialized: ephemeral
+      airbyte_incremental:
+        +tags: incremental_tables
+        +materialized: table
+      airbyte_tables:
+        +tags: normalized_tables
+        +materialized: table
+      airbyte_views:
+        +tags: airbyte_internal_views
+        +materialized: view
+vars:
+  dbt_utils_dispatch_list:
+  - airbyte_utils
+  json_column: _airbyte_data
+  models_to_source:
+    pocode_ab1: line3_huaxuanmes3._airbyte_raw_pocode
+    pocode_ab2: line3_huaxuanmes3._airbyte_raw_pocode
+    pocode_ab3: line3_huaxuanmes3._airbyte_raw_pocode
+    pocode: line3_huaxuanmes3._airbyte_raw_pocode
+    data_lowvoltage_ab1: line3_huaxuanmes3._airbyte_raw_data_lowvoltage
+    data_lowvoltage_ab2: line3_huaxuanmes3._airbyte_raw_data_lowvoltage
+    data_lowvoltage_ab3: line3_huaxuanmes3._airbyte_raw_data_lowvoltage
+    data_lowvoltage: line3_huaxuanmes3._airbyte_raw_data_lowvoltage
+    setting_resistance_ab1: line3_huaxuanmes3._airbyte_raw_setting_resistance
+    setting_resistance_ab2: line3_huaxuanmes3._airbyte_raw_setting_resistance
+    setting_resistance_ab3: line3_huaxuanmes3._airbyte_raw_setting_resistance
+    setting_resistance: line3_huaxuanmes3._airbyte_raw_setting_resistance
+    packagecodetable_ab1: line3_huaxuanmes3._airbyte_raw_packagecodetable
+    packagecodetable_ab2: line3_huaxuanmes3._airbyte_raw_packagecodetable
+    packagecodetable_ab3: line3_huaxuanmes3._airbyte_raw_packagecodetable
+    packagecodetable: line3_huaxuanmes3._airbyte_raw_packagecodetable
+    data_laserengraving_ab1: line3_huaxuanmes3._airbyte_raw_data_laserengraving
+    data_laserengraving_ab2: line3_huaxuanmes3._airbyte_raw_data_laserengraving
+    data_laserengraving_ab3: line3_huaxuanmes3._airbyte_raw_data_laserengraving
+    data_laserengraving: line3_huaxuanmes3._airbyte_raw_data_laserengraving
+    data_stationnum_ab1: line3_huaxuanmes3._airbyte_raw_data_stationnum
+    data_stationnum_ab2: line3_huaxuanmes3._airbyte_raw_data_stationnum
+    data_stationnum_ab3: line3_huaxuanmes3._airbyte_raw_data_stationnum
+    data_stationnum: line3_huaxuanmes3._airbyte_raw_data_stationnum
+    data_highvoltage_ab1: line3_huaxuanmes3._airbyte_raw_data_highvoltage
+    data_highvoltage_ab2: line3_huaxuanmes3._airbyte_raw_data_highvoltage
+    data_highvoltage_ab3: line3_huaxuanmes3._airbyte_raw_data_highvoltage
+    data_highvoltage: line3_huaxuanmes3._airbyte_raw_data_highvoltage
+    data_card_ab1: line3_huaxuanmes3._airbyte_raw_data_card
+    data_card_ab2: line3_huaxuanmes3._airbyte_raw_data_card
+    data_card_ab3: line3_huaxuanmes3._airbyte_raw_data_card
+    data_card: line3_huaxuanmes3._airbyte_raw_data_card
+    data_usercard_ab1: line3_huaxuanmes3._airbyte_raw_data_usercard
+    data_usercard_ab2: line3_huaxuanmes3._airbyte_raw_data_usercard
+    data_usercard_ab3: line3_huaxuanmes3._airbyte_raw_data_usercard
+    data_usercard: line3_huaxuanmes3._airbyte_raw_data_usercard
+    data_waveweld_ab1: line3_huaxuanmes3._airbyte_raw_data_waveweld
+    data_waveweld_ab2: line3_huaxuanmes3._airbyte_raw_data_waveweld
+    data_waveweld_ab3: line3_huaxuanmes3._airbyte_raw_data_waveweld
+    data_waveweld: line3_huaxuanmes3._airbyte_raw_data_waveweld
+    resistance_range_ab1: line3_huaxuanmes3._airbyte_raw_resistance_range
+    resistance_range_ab2: line3_huaxuanmes3._airbyte_raw_resistance_range
+    resistance_range_ab3: line3_huaxuanmes3._airbyte_raw_resistance_range
+    resistance_range: line3_huaxuanmes3._airbyte_raw_resistance_range
+    warehousechu_ab1: line3_huaxuanmes3._airbyte_raw_warehousechu
+    warehousechu_ab2: line3_huaxuanmes3._airbyte_raw_warehousechu
+    warehousechu_ab3: line3_huaxuanmes3._airbyte_raw_warehousechu
+    warehousechu: line3_huaxuanmes3._airbyte_raw_warehousechu
+    data_tunnelstove_ab1: line3_huaxuanmes3._airbyte_raw_data_tunnelstove
+    data_tunnelstove_ab2: line3_huaxuanmes3._airbyte_raw_data_tunnelstove
+    data_tunnelstove_ab3: line3_huaxuanmes3._airbyte_raw_data_tunnelstove
+    data_tunnelstove: line3_huaxuanmes3._airbyte_raw_data_tunnelstove
+    data_winding_ab1: line3_huaxuanmes3._airbyte_raw_data_winding
+    data_winding_ab2: line3_huaxuanmes3._airbyte_raw_data_winding
+    data_winding_stg: line3_huaxuanmes3._airbyte_raw_data_winding
+    data_winding_scd: line3_huaxuanmes3._airbyte_raw_data_winding
+    data_winding: line3_huaxuanmes3._airbyte_raw_data_winding
+    warehouse_ab1: line3_huaxuanmes3._airbyte_raw_warehouse
+    warehouse_ab2: line3_huaxuanmes3._airbyte_raw_warehouse
+    warehouse_ab3: line3_huaxuanmes3._airbyte_raw_warehouse
+    warehouse: line3_huaxuanmes3._airbyte_raw_warehouse
+    uponline_ab1: line3_huaxuanmes3._airbyte_raw_uponline
+    uponline_ab2: line3_huaxuanmes3._airbyte_raw_uponline
+    uponline_ab3: line3_huaxuanmes3._airbyte_raw_uponline
+    uponline: line3_huaxuanmes3._airbyte_raw_uponline
+    data_resistance_ab1: line3_huaxuanmes3._airbyte_raw_data_resistance
+    data_resistance_ab2: line3_huaxuanmes3._airbyte_raw_data_resistance
+    data_resistance_ab3: line3_huaxuanmes3._airbyte_raw_data_resistance
+    data_resistance: line3_huaxuanmes3._airbyte_raw_data_resistance
+    data_tigweld_ab1: line3_huaxuanmes3._airbyte_raw_data_tigweld
+    data_tigweld_ab2: line3_huaxuanmes3._airbyte_raw_data_tigweld
+    data_tigweld_ab3: line3_huaxuanmes3._airbyte_raw_data_tigweld
+    data_tigweld: line3_huaxuanmes3._airbyte_raw_data_tigweld
+    data_allflow_ab1: line3_huaxuanmes3._airbyte_raw_data_allflow
+    data_allflow_ab2: line3_huaxuanmes3._airbyte_raw_data_allflow
+    data_allflow_ab3: line3_huaxuanmes3._airbyte_raw_data_allflow
+    data_allflow: line3_huaxuanmes3._airbyte_raw_data_allflow
+    data_package_ab1: line3_huaxuanmes3._airbyte_raw_data_package
+    data_package_ab2: line3_huaxuanmes3._airbyte_raw_data_package
+    data_package_ab3: line3_huaxuanmes3._airbyte_raw_data_package
+    data_package: line3_huaxuanmes3._airbyte_raw_data_package
+    data_gp12_ab1: line3_huaxuanmes3._airbyte_raw_data_gp12
+    data_gp12_ab2: line3_huaxuanmes3._airbyte_raw_data_gp12
+    data_gp12_ab3: line3_huaxuanmes3._airbyte_raw_data_gp12
+    data_gp12: line3_huaxuanmes3._airbyte_raw_data_gp12
+    setting_packagenum_ab1: line3_huaxuanmes3._airbyte_raw_setting_packagenum
+    setting_packagenum_ab2: line3_huaxuanmes3._airbyte_raw_setting_packagenum
+    setting_packagenum_ab3: line3_huaxuanmes3._airbyte_raw_setting_packagenum
+    setting_packagenum: line3_huaxuanmes3._airbyte_raw_setting_packagenum
+    data_gumming_ab1: line3_huaxuanmes3._airbyte_raw_data_gumming
+    data_gumming_ab2: line3_huaxuanmes3._airbyte_raw_data_gumming
+    data_gumming_stg: line3_huaxuanmes3._airbyte_raw_data_gumming
+    data_gumming_scd: line3_huaxuanmes3._airbyte_raw_data_gumming
+    data_gumming: line3_huaxuanmes3._airbyte_raw_data_gumming

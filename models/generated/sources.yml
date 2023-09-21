@@ -1,0 +1,31 @@
+version: 2
+sources:
+- name: line3_huaxuanmes3
+  quoting:
+    database: true
+    schema: false
+    identifier: false
+  tables:
+  - name: _airbyte_raw_data_allflow
+  - name: _airbyte_raw_data_card
+  - name: _airbyte_raw_data_gp12
+  - name: _airbyte_raw_data_gumming
+  - name: _airbyte_raw_data_highvoltage
+  - name: _airbyte_raw_data_laserengraving
+  - name: _airbyte_raw_data_lowvoltage
+  - name: _airbyte_raw_data_package
+  - name: _airbyte_raw_data_resistance
+  - name: _airbyte_raw_data_stationnum
+  - name: _airbyte_raw_data_tigweld
+  - name: _airbyte_raw_data_tunnelstove
+  - name: _airbyte_raw_data_usercard
+  - name: _airbyte_raw_data_waveweld
+  - name: _airbyte_raw_data_winding
+  - name: _airbyte_raw_packagecodetable
+  - name: _airbyte_raw_pocode
+  - name: _airbyte_raw_resistance_range
+  - name: _airbyte_raw_setting_packagenum
+  - name: _airbyte_raw_setting_resistance
+  - name: _airbyte_raw_uponline
+  - name: _airbyte_raw_warehouse
+  - name: _airbyte_raw_warehousechu
